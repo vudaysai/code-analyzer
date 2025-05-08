@@ -1,6 +1,6 @@
 # Code Analyzer
 
-A node.js script for analyzing code files and extracting metrics like blank lines, comments, imports, variable declarations, and total code lines. Currently supports **JavaScript** and **Java** files.
+A node.js script for analyzing code files and extracting metrics like blank lines, comments, imports, variable declarations and total code lines. Currently supports **JavaScript** and **Java** files.
 
 ## Features:
 - **Blank Lines**: Counts blank lines.
@@ -18,17 +18,31 @@ A node.js script for analyzing code files and extracting metrics like blank line
 
 ## Usage:
 1. Clone the repo and navigate to the project folder.
-2. Place the source code files you want to analyze inside the `test-files ` folder.
+2. Place the source code files you want to analyze inside the `test-files` folder.
 3. Run the analyzer:
     ```bash
-    node analyzer.js test-files /<file-name>
+    node analyzer.js test-files/<file-name>
     ```
 ### Example:
 
-To analyze a `eg1.java` file located in the `test-files ` folder:
+To analyze a `eg1.java` file located in the `test-files` folder:
 ```bash
-node analyzer.js test-files /eg1.java
+node analyzer.js test-files/eg1.java
+```
+### Sample Output:
+```bash
+Blank: 3
+Comments: 3
+Imports: 1
+Variables: 0
+Code: 6
+
+Code Analyzer
+
+Total: 12
+```
 
 ## Pending Features:
 - Variable declaration detection for **Java** files.
 - Support for more languages (e.g., C, C++) can be added by extending the `LanguageSyntax` class.
+- Support for analyzing multiple files in a source tree
